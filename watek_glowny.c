@@ -1,7 +1,6 @@
 #include "main.h"
 #include "watek_glowny.h"
 
-//println("Ubiegam się o sekcję krytyczną")
 void mainLoop()
 {
     srandom(rank);
@@ -16,7 +15,7 @@ void mainLoop()
 	set_ACK_number(0);
 	set_house_number(-1);
 	changeState(InNothin);
-		while (stan != InFinish) {
+	while (stan != InFinish) {
 		switch (stan) {
 			case InNothin:
 				changeState(InHouse);
@@ -50,7 +49,6 @@ void mainLoop()
 
 
 				println("Mogę wziąć dom, wybieram numer");
-				// get house number logic
 
 				MPI_Barrier(MPI_COMM_WORLD);
 

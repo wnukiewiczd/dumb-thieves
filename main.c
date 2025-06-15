@@ -3,21 +3,12 @@
 #include "watek_glowny.h"
 #include "watek_komunikacyjny.h"
 
-/*
- * W main.h extern int rank (zapowiedź) w main.c int rank (definicja)
- * Zwróćcie uwagę, że każdy proces ma osobą pamięć, ale w ramach jednego
- * procesu wątki współdzielą zmienne - więc dostęp do nich powinien
- * być obwarowany muteksami. Rank i size akurat są write-once, więc nie trzeba,
- * ale zob util.c oraz util.h - zmienną state_t state i funkcję changeState
- *
- */
+
 int rank, size;
 int ackCount = 0;
 /* 
  * Każdy proces ma dwa wątki - główny i komunikacyjny
- * w plikach, odpowiednio, watek_glowny.c oraz (siurpryza) watek_komunikacyjny.c
- *
- *
+ * w plikach, odpowiednio, watek_glowny.c oraz watek_komunikacyjny.c
  */
 
 pthread_t threadKom;
@@ -52,26 +43,19 @@ int main(int argc, char **argv)
     MPI_Init_thread(&argc, &argv, MPI_THREAD_MULTIPLE, &provided);
     check_thread_support(provided);
     srand(rank);
-    /* zob. util.c oraz util.h */
     inicjuj_typ_pakietu(); // tworzy typ pakietu
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    /* startKomWatek w watek_komunikacyjny.c 
-     * w vi najedź kursorem na nazwę pliku i wciśnij klawisze gf
-     * powrót po wciśnięciu ctrl+6
-     * */
-    initQueue(size);
+
+    initQueue(size); //tworzenie kolejki
     pthread_create( &threadKom, NULL, startKomWatek , 0);
 
-    /* mainLoop w watek_glowny.c 
-     * w vi najedź kursorem na nazwę pliku i wciśnij klawisze gf
-     * powrót po wciśnięciu ctrl+6
-     * */
-    mainLoop(); // możesz także wcisnąć ctrl-] na nazwie funkcji
-		// działa, bo używamy ctags (zob Makefile)
-		// jak nie działa, wpisz set tags=./tags :)
+    // mainLoop w watek_glowny.c 
     
+    mainLoop(); 
+
     finalizuj();
+    
     return 0;
 }
 

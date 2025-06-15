@@ -17,4 +17,6 @@ tags: ${SOURCES} ${HEADERS}
 	ctags -R .
 
 run: main Makefile tags
-	mpirun -np 3 -hostfile hosts.txt ./main
+	mpirun -np 3 ./main
+
+#-hostfile hosts.txt 
