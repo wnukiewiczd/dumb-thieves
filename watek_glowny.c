@@ -52,6 +52,8 @@ void mainLoop()
 				println("Mogę wziąć dom, wybieram numer");
 				// get house number logic
 
+				MPI_Barrier(MPI_COMM_WORLD);
+
 				clearQueue(&numberQueue);
 				pkt.ts = lamport_clock;
 				pkt.src = rank;
