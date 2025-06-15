@@ -1,0 +1,88 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACK	util.h	35;"	d
+ACK_number	util.c	/^int ACK_number = -0;$/;"	v
+ACK_number_mutex	util.c	/^pthread_mutex_t ACK_number_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+FALSE	main.h	14;"	d
+FLAGS	Makefile	/^FLAGS=-g$/;"	m
+HEADERS	Makefile	/^HEADERS=$(SOURCES:.c=.h)$/;"	m
+InFinish	util.h	/^typedef enum {InPaser, InHouse, InNothin, InFinish} state_t;$/;"	e	enum:__anon3
+InHouse	util.h	/^typedef enum {InPaser, InHouse, InNothin, InFinish} state_t;$/;"	e	enum:__anon3
+InNothin	util.h	/^typedef enum {InPaser, InHouse, InNothin, InFinish} state_t;$/;"	e	enum:__anon3
+InPaser	util.h	/^typedef enum {InPaser, InHouse, InNothin, InFinish} state_t;$/;"	e	enum:__anon3
+MAINH	main.h	2;"	d
+MPI_PAKIET_T	util.c	/^MPI_Datatype MPI_PAKIET_T;$/;"	v
+NITEMS	util.h	12;"	d
+NUM	util.h	38;"	d
+NUM_HOUSES	watek_glowny.h	5;"	d
+NUM_PASERS	watek_glowny.h	6;"	d
+REQ	util.h	36;"	d
+RET	util.h	37;"	d
+ROOT	main.h	18;"	d
+SEC_IN_STATE	main.h	15;"	d
+SOURCES	Makefile	/^SOURCES=$(wildcard *.c)$/;"	m
+STATE_CHANGE_PROB	main.h	16;"	d
+TRUE	main.h	13;"	d
+UTILH	util.h	2;"	d
+WATEK_GLOWNY_H	watek_glowny.h	2;"	d
+WATEK_KOMUNIKACYJNY_H	watek_komunikacyjny.h	2;"	d
+ackCount	main.c	/^int ackCount = 0;$/;"	v
+capacity	util.h	/^    int capacity; \/\/by ustalić rozmiar *packets$/;"	m	struct:__anon2
+changeState	util.c	/^void changeState( state_t newState )$/;"	f
+check_thread_support	main.c	/^void check_thread_support(int provided)$/;"	f
+clearQueue	util.c	/^void clearQueue(queue_t *queue) {$/;"	f
+clearQueueBySrc	util.c	/^void clearQueueBySrc(queue_t *queue, int src) {$/;"	f
+comparePackets	util.c	/^static int comparePackets(const void *a, const void *b) {$/;"	f	file:
+debug	main.h	49;"	d
+debug	main.h	51;"	d
+destroyQueue	util.c	/^void destroyQueue() {$/;"	f
+enqueueWithPriority	util.c	/^int enqueueWithPriority(queue_t *queue, packet_t packet) {$/;"	f
+finalizuj	main.c	/^void finalizuj()$/;"	f
+get_ACK_number	util.c	/^int get_ACK_number() {$/;"	f
+get_house_number	util.c	/^int get_house_number() {$/;"	f
+house	util.h	43;"	d
+houseQueue	util.c	/^queue_t houseQueue;$/;"	v
+house_number_mutex	util.c	/^pthread_mutex_t house_number_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+increment_lamport	util.c	/^void increment_lamport() {$/;"	f
+inicjuj_typ_pakietu	util.c	/^void inicjuj_typ_pakietu()$/;"	f
+initQueue	util.c	/^void initQueue(int thread_count) {$/;"	f
+lamport_clock	util.c	/^int lamport_clock = 0;$/;"	v
+lamport_mutex	util.c	/^pthread_mutex_t lamport_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+main	main.c	/^int main(int argc, char **argv)$/;"	f
+mainLoop	watek_glowny.c	/^void mainLoop()$/;"	f
+mutex	util.h	/^    pthread_mutex_t mutex;$/;"	m	struct:__anon2
+my_house_number	util.c	/^int my_house_number = -1;$/;"	v
+name	util.c	/^    const char *name;$/;"	m	struct:tagNames_t	file:
+numberQueue	util.c	/^queue_t numberQueue;$/;"	v
+packet_t	util.h	/^} packet_t;$/;"	t	typeref:struct:__anon1
+packets	util.h	/^    packet_t *packets;$/;"	m	struct:__anon2
+paser	util.h	44;"	d
+paserQueue	util.c	/^queue_t paserQueue;$/;"	v
+println	main.h	55;"	d
+queue_t	util.h	/^} queue_t;$/;"	t	typeref:struct:__anon2
+r_ans	util.h	42;"	d
+r_ask	util.h	41;"	d
+rank	main.c	/^int rank, size;$/;"	v
+sendPacket	util.c	/^void sendPacket(packet_t *pkt, int destination, int tag)$/;"	f
+set_ACK_number	util.c	/^void set_ACK_number(int number) {$/;"	f
+set_house_number	util.c	/^void set_house_number(int number) {$/;"	f
+size	main.c	/^int rank, size;$/;"	v
+size	util.h	/^    int size; \/\/ilość elementów$/;"	m	struct:__anon2
+src	util.h	/^    int src;  $/;"	m	struct:__anon1
+stan	util.c	/^state_t stan=InNothin;$/;"	v
+startKomWatek	watek_komunikacyjny.c	/^void *startKomWatek(void *ptr)$/;"	f
+stateMut	util.c	/^pthread_mutex_t stateMut = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+state_t	util.h	/^typedef enum {InPaser, InHouse, InNothin, InFinish} state_t;$/;"	t	typeref:enum:__anon3
+tag	util.c	/^    int tag;$/;"	m	struct:tagNames_t	file:
+tag2string	util.c	/^const char *const tag2string( int tag )$/;"	f
+tagNames	util.c	/^} tagNames[] = { { "number domu", NUM }, $/;"	v	typeref:struct:tagNames_t
+tagNames_t	util.c	/^struct tagNames_t{$/;"	s	file:
+threadKom	main.c	/^pthread_t threadKom;$/;"	v
+total_threads	util.c	/^int total_threads;$/;"	v
+ts	util.h	/^    int ts;       \/* timestamp (zegar lamporta *\/$/;"	m	struct:__anon1
+type	util.h	/^    int type;      \/*resource type*\/$/;"	m	struct:__anon1
+update_lamport	util.c	/^void update_lamport(int received_timestamp) {$/;"	f
